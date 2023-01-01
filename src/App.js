@@ -9,7 +9,7 @@ import Card from "./components/Card";
 
 
 function App() {
-
+  // Lifting State Up
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
 
@@ -67,7 +67,7 @@ function App() {
       <Navbar />
 
       <Routes>
-        {/* "pass will pass "allProduct" function to another component */}
+        {/* "pass" will pass "allProduct" function to another component */}
         <Route path="/" element={<Home store={store} cate={cate} pass={allProduct}/>} />
         <Route path="about" element={<About />} />
         <Route path="product/:productId" element={<ProductDetails products={products} />}/>
